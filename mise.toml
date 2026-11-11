@@ -1,0 +1,28 @@
+[tools]
+gradle = "8.10.2"
+java = "8"
+
+[tasks.check]
+run = "git diff --check"
+
+[tasks."MobileOrg:build"]
+run = "gradle build"
+dir = "MobileOrg"
+
+[tasks."MobileOrg:test"]
+run = "gradle test"
+dir = "MobileOrg"
+
+[tasks.build]
+run = "./gradlew build"
+
+[tasks.test]
+run = "./gradlew test"
+
+[tasks."libraries:locale:build"]
+run = "gradle build"
+dir = "libraries/locale"
+
+[tasks."libraries:locale:test"]
+run = "gradle test"
+dir = "libraries/locale"
